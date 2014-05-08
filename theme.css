@@ -1,9 +1,172 @@
 @charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body, table, form, input, td, th, p, textarea, select {
-  font-family: "Comic Sans", Verdana, Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #3F3F3F;
+}
+a, #login-field a {
+	color: #3F3F3F;
+	text-decoration: none;
+}
+#left-top-nav a.auto-refresh {
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 0 10px;
+	font-size: 9px;
+	font-weight: bold;
+	color: rgba(255,255,255, 0.8);
+	position: relative;
+	top: -4px;
+}
+	#left-top-nav a.auto-refresh.enabled {
+		background: rgba(0,200,0,0.5);
+	}
+	#left-top-nav a.auto-refresh.disabled {
+		background: rgba(200,0,0,0.5);
+	}
+a:hover, #login-field a:hover {
+	text-decoration: underline;
+	text-decoration-color: #3F3F3F;
+}
+textarea {
+	width: 600px !important;
+	min-height: 200px !important;
+}
+input[type=text] {
+	width: 400px !important;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 3px 4px;
+}
+p { margin: 0 !important; }
+h2 {
+	margin: 10px 2px 5px;
+	font-size: 11pt;
+	font-weight: bold;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+pre {
+	font-size: 11px;
 }
 
 #main-table {
-  background-image: url(pineapple.jpg) !important;
+	position: relative;
+	z-index: 1;
+	background-image: none !important;
+	background: rgba(255,255,255,0.96);
+	width: 80%;
+	margin: auto;
+	border-radius: 20px;
+	box-shadow: 1px 1px 5px black;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+#top-panel, .top-sticker-inner {
+	background: none !important;
+	width: 80%;
+	margin: auto;
+}
+#search-box {
+	background: rgba(255,255,255,0.4) !important;
+	padding: 10px;
+	font-size: 1.3em;
+}
+#search-box:focus {
+	background: rgba(255,255,255,0.95) !important;
+}
+
+#header {
+	background: rgba(255,255,255,0.95);
+}
+#left-top-nav {
+    background: rgba(225,225,225,0.3);
+}
+#login-field {
+	color: inherit;
+}
+
+#side-panel {
+	min-width: 190px;
+	padding-bottom: 120px;
+}
+#main-panel {
+	padding: 10px 0 40px;
+}
+#buildHistory {
+	margin-top: 10px;
+	max-width: 600px;
+}
+	#buildHistory .pane-header {
+		background: none;
+	}
+#projectstatus {
+	max-width: 800px;
+}
+	
+#tasks {
+	min-height: 300px;
+	margin: 10px 25px;
+	max-width: 180px;
+	overflow: hidden;
+}
+	#tasks a {
+		color: #3F3F3F;
+		line-height: 2.5em;
+		text-decoration: none;
+	}
+	#tasks a:hover {
+		text-decoration: underline;
+		text-decoration-color: #3F3F3F;
+	}
+
+.pane-header a[title=collapse], .build-rss-links, #executors th {
+	display: none
+}
+
+td.pane, th.pane, td.pane-header, table.pane, .bigtable tr, table.pane > tbody > tr > td:last-child {
+	border: none !important;
+}
+table.pane tr:hover, .bigtable tr:hover {
+	background: rgba(0,0,0,0.1);
+}
+table.pane th, .bigtable th, table.pane td, .bigtable td {
+	padding: 8px;
+}
+
+.activity tr td img, a img, #management-links img {
+	height: 16px; width: 16px;
+}
+h1 img {
+	height: 32px; width: 32px;
+}
+.activity tr {
+	border-bottom: 1px solid #8a8a8a;
+}
+
+.mappedin-logo {
+	background: url('https://mappedin.com/website/home-s5e28dea769.png') no-repeat;
+    background-position: 0 -1209px;
+    width: 112px;
+    height: 47px;
+    display: inline-block;
+	margin: 15px 40px;
+}
+
+body:before {
+	content: "";
+	position: fixed;
+	top: 0; 
+	left: 0;
+	width: 100%; 
+	height: 100%;
+	z-index: -1;
+	background: url(wood.jpg);
+	background-size: cover;
 }
