@@ -10,13 +10,28 @@ var doshit = function ($) {
   $("#main-panel .dashboard table:first").remove();
   $("h1.build-caption").next().next().addClass("activity").prev().remove();
   if ($("h1.page-headline").size() && $("#buildHistory").size()) {
-    $("#buildHistory").insertAfter("#side-panel");
-    $("#main-panel").appendTo("#side-panel");
+    $("#buildHistory").appendTo("#main-panel");
+    // $("#main-panel").appendTo("#side-panel");
     $("#main-panel div[align=right]").remove();
   }
   $('a[href="/me/my-views"]').parents(".task").remove();
+  $('.top-sticker.noedge').attr("style", "").prev().remove();
+  $('#projectstatus,#projectStatus').find('.build-health-link').parents('.healthReport').each(function () {
+    $(this).text($(this).attr("data")+'%');
+    var name = $(this).next();
+    name.addClass("project-name")
+    var status = $(this).prev();
+    if (status.attr("data") == 4) {
+      status.parent("tr").addClass("success");
+      status.html('');
+    } else if (status.attr("data") == 10) {
+      status.parent("tr").addClass("cancelled");
+    }
+  });
 }
+var oldOnload = window.onload;
 window.onload = function() {
+  oldOnload && oldOnload()
   console.log("Leander's theme is starting, lol.");
   var el = document.createElement('div');
   var b = document.getElementsByTagName('body')[0];

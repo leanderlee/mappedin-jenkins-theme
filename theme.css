@@ -10,6 +10,48 @@ a, #login-field a {
 	color: #3F3F3F;
 	text-decoration: none;
 }
+.top-sticker.noedge {
+	position: relative !important;
+}
+form #bottom-sticker {
+	display: block;
+}
+#bottom-sticker {
+	display: none;
+}
+#projectstatus th, #projectStatus th {
+	background: none;
+}
+#projectstatus td, #projectStatus td {
+	padding: 20px 8px;
+}
+#projectstatus .project-name, #projectStatus .project-name {
+	min-width: 200px;
+}
+#projectstatus .project-name a, #projectStatus .project-name a {
+	text-decoration: none;
+	color: #3F3F3F;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+table.pane.bigtable tr.success {
+	background: rgb(145, 224, 145);
+}
+	table.pane.bigtable tr.success:hover {
+		background: rgb(172, 238, 172)
+	}
+table.pane.bigtable tr.cancelled {
+	background: rgb(182, 182, 182);
+	text-decoration: line-through;
+}
+	table.pane.bigtable tr.cancelled:hover {
+		background: rgb(220, 220, 220);
+	}
+.global-matrix-authorization-strategy-table .caption-row th {
+	padding: 10px !important;
+	background: rgba(0,0,0,0.1);
+	font-size: 0.8em;
+}
 #left-top-nav a.auto-refresh {
 	text-decoration: none;
 	display: inline-block;
@@ -97,7 +139,7 @@ pre {
 	padding-bottom: 120px;
 }
 #main-panel {
-	padding: 10px 0 40px;
+	padding: 10px 10px 40px;
 }
 #buildHistory {
 	margin-top: 10px;
@@ -148,6 +190,14 @@ h1 img {
 }
 .activity tr {
 	border-bottom: 1px solid #8a8a8a;
+}
+input[name=pattern] {
+	width: 100px !important;
+	font-size: 10pt;
+	border-radius: 3px;
+	padding: 3px;
+	padding: 0;
+	background: transparent;
 }
 
 .mappedin-logo {
